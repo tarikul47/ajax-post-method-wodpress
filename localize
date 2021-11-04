@@ -1,0 +1,9 @@
+<?php
+wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/js/custom.js', array('jquery'), true, true);
+wp_localize_script(
+			'custom-scripts',
+			'frontend_ajax_object',
+			array(
+				'ajaxurl' => admin_url('admin-ajax.php'),
+			)
+		);
